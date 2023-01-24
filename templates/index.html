@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>M</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    </head>
+    <body>
+        <div id="main">
+            {%for message in messages%}
+                
+                <p id="msg">{{message}}</p>
+                <br>
+                
+            {%endfor%}
+
+        </div>
+        <div>
+            <form id="message" method="POST">
+                <input id="msgbox" type="text" name="message" placeholder="type a message">
+                <input id="submit" type="submit" placeholder="Send">
+            </form>
+        </div>
+    </body>
+</html>
